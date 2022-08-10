@@ -1,0 +1,101 @@
+/* everything stolen from the shared file
+
+.navbar {
+    display: block;
+    height: 105px;
+    max-height: 240px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.clearfix:after,
+.container:after,
+.navbar:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.wrap {
+    /*fixes images rendering outisde of boxes
+    height: auto;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.menu-container {
+    content: " ";
+    margin: 0% auto;
+    max-height: 340px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+*/
+
+/*end of everything from shared.css*/ 
+.wrap {
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+
+.menu-container {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu {
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+
+    width: 100px;
+    color: white;
+    display: inline-block;
+    margin-right: -2px;
+    position: relative;
+    padding: 12px 40px;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    background-color: navy;
+    cursor: pointer;
+}
+
+
+.menu li:hover {
+    color:white;
+    background-color:blue;
+}
+
+.menu li:hover ul {
+    /*only visible when hovered*/
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}

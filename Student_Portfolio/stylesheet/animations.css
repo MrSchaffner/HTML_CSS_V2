@@ -1,0 +1,127 @@
+html{
+  scroll-behavior: smooth;
+}
+
+#slideshow{
+  margin: 0px auto;
+  position: relative;
+  width: 100%;
+  /* max-width: 900px; */
+  height: 250px;
+  padding: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+#slideshow > div {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+
+#animated_1{
+  animation-duration: 5s;
+  animation-name: colorChange;
+  /* must match ending attributes, or it will jump to defaults when animation ends:    */
+  color: blue;
+
+}
+
+/* animation-name found in tag  */
+@keyframes colorChange{
+0% {color: red;}
+25% {color:yellow;}
+100% {color: blue;}
+}
+
+/* Image element hover effects */
+.imgCol img:hover {
+	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+  border: 5px solid #000;
+ 
+  animation: zoomInOut 1.5s;
+}
+
+@keyframes zoomInOut{
+  0% {transform:scale(1,1);}
+  50%{transform:scale(1.5,1.5);}
+  100% {transform:scale(1,1);}
+}
+
+/* fade in */
+body {
+  opacity:1;
+  transition: 10s opacity;
+}
+
+.fade-in-body {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+/* end fade in */
+
+/* Navbar animations */
+
+.Navbar{
+  -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
+  animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
+}
+
+/* moveNav animation effect for moving the nav bar in from the left of the screen */
+@keyframes moveNav {
+  from {left: -100vw;} /* The navbar is starting off screen to the left */
+  to {left: 0vw;} /* This moves the navbar into place on the screen */
+}
+
+
+.Navbar a{
+  -webkit-animation: moveNavText 1s; /* Animation for Safari 4.0 - 8.0 */
+  animation: moveNavText 1s; /* Applies the moveNavText animation for 5.75s */ 
+
+} 
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+  from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+  to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
+
+
+
+/* Navbar hover effects */
+.Navbar a:hover {
+  background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
+  color: black; /* This defines the font color that will display when navbar a elements are hovered over */
+  font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+}
+/* end navbar animations */
+
+

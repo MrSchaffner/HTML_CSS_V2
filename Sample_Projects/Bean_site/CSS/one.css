@@ -1,0 +1,40 @@
+body {
+    background-attachment: fixed;
+    background-image: url(../Images/cloud_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2, h3, p {
+    align: center;
+    color: white;
+}
+
+h1{
+  font-size:large;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.reservation input[type="text"]{
+    background: #13161b;
+    border-bottom: 2px solid #444;
+    border-left: 1px solid #111;
+    border-radius: 7px;
+    border-right: 2px solid #444;
+    border-top: 1px solid #888;
+    box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 255.3);
+    color: #888;
+    font-family: 'Raleway';
+    font-size: 15px;
+    font-weight: 600;
+    margin: 3px 1em;
+    outline: none;
+    padding: 2% 1% 2% 7%;
+    width: 80%;
+}

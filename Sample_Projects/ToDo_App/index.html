@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>To Do</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JQUERY should work in HEAD, before any of its code is used. -->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    just some words
+    <hr>
+
+    <input id="task"><button id="add">Add Task</button>
+    <hr>
+    <div id="todos">todos here</div>
+
+
+    <hr style="border-top:10px solid red;"> 
+
+    <div id="jsonTest">json stringify here</div>
+
+    <script>
+        var blender = { name: "Paul", brand: "Sharpier", color: "retro turquoise" };
+        var JSONStringOfBlender = JSON.stringify(blender);
+
+        document.getElementById("jsonTest").innerHTML += JSONStringOfBlender;
+    </script>
+    <hr>
+    <div id="jsonTest2">json parsed and used here:<br></div>
+    <script>
+
+        var jsonParsed = JSON.parse(JSONStringOfBlender);
+        
+        document.getElementById("jsonTest2").innerHTML += jsonParsed.name +" is the best blender."
+
+        document.getElementById("jsonTest").innerHTML += JSONStringOfBlender;
+    </script>
+    <hr>
+    <div id="localStorageTest">Local Storage Test:<br></div>
+    <script>
+localStorage.setItem("testItem","Value of testItem");
+
+$("#localStorageTest").delay(1500).html(localStorage.getItem("testItem"))
+
+    </script>
+</body>
+
+<footer>
+    <div class="footer-div">
+        <p> Seth S. Copyright 2022</p>
+    </div>
+</footer>
+
+
+<script src="JS/main.js"></script>
+
+</html>

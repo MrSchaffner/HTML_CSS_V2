@@ -1,0 +1,11 @@
+.menu li{
+    transition-property: background;
+    transition-duration: .65s;
+transition-delay: 0s;
+transition-timing-function: ease-in-out;
+}
+
+.menu li:hover{
+    color: #f00;
+background-color: rgba(100,65,0,0); 
+}

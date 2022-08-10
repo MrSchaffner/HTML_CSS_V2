@@ -1,0 +1,44 @@
+html{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 0%;
+  margin:0%
+
+}
+
+body{
+  left:0px;
+  position:absolute;
+  margin:0px; /*always use this*/
+}
+
+hr{
+  padding:0%;
+  margin: 0%;
+  border-top:2px solid blue;
+  
+}
+
+input{
+  padding-top:30px;
+  width:500px;
+  height:60px;
+  font-size:40px;
+  border: 0;
+}
+
+input:focus{
+  outline:none;
+}
+
+li{
+  text-align: left;
+  font-size: 40px;
+  list-style: none;
+  margin:0;
+}
+
+p{
+  width:100%;
+  border:5px solid brown;
+}

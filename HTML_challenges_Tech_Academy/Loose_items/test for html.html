@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>HTML_Form</title>
+    <style>
+        .center {
+            text-align: center;
+            display: block;
+            align-items: center;
+            margin: auto;
+            padding: 0;
+        }
+
+        .filter {
+            filter: blur(100px);
+            filter: hue-rotate(90deg)
+        }
+
+        .round-edge {
+            border-radius: 50px/5px;
+
+        }
+
+        .border {
+            border: 5px solid gainsboro;
+        }
+
+        .embolden {
+            font-weight: bolder;
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 20px;
+        }
+
+        th {
+            background-color: lightpink;
+        }
+
+        p:hover {
+            filter: hue-rotate(90deg);
+        }
+
+        .container {
+
+            transition: 1s ease-in-out;
+            position: relative;
+            text-align: center;
+            color: #eee;
+        }
+
+        .container:hover img {
+            opacity: .3;
+            transition: 1s ease-in-out;
+        }
+
+        .container:hover .overlay {
+            opacity: .3;
+            transition: 1s ease-in-out;
+        }
+
+        .overlay {
+            color: blue;
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .shrink {
+            margin: auto;
+            max-width: 50%;
+        }
+
+        .wrap {
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+        }
+
+        .menu-container {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .menu {
+            font: bold 12px/18px sans-serif;
+            text-align: center;
+            display: inline;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu li {
+
+            width: 100px;
+            color: white;
+            display: inline-block;
+            margin-right: -2px;
+            position: relative;
+            padding: 12px 40px;
+            border: 1px solid gainsboro;
+            border-radius: 4px;
+            background-color: navy;
+            cursor: pointer;
+
+
+
+        }
+
+
+        .menu li:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .menu li:hover ul {
+            /*only visible when hovered*/
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* same as
+.submenu { */
+        .menu li ul {
+            padding: 0;
+            left: 0;
+            position: absolute;
+            top: 43.5px;
+            width: 100px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .menu li ul li {
+            background-color: gold;
+
+            display: block;
+            color: black;
+        }
+
+        .submenu li:hover {
+            color: white;
+            background-color: goldenrod;
+        }
+
+        .top-margin {
+            margin-top: 50px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .row {
+
+            height: 100px;
+            color: lime;
+        }
+
+        .col-color-blue {
+            background-color: lightskyblue;
+        }
+
+        .text-white{
+color:white;
+font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="menu-container">
+            <ul class="menu">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <!--
+                <li>PORTFOLIO
+                    <UL class="submenu">
+                        <li>Page 1</li>
+                        <li>Page 2</li>
+                        <li>Page 3</li>
+                        <li>Page 4</li>
+                    </UL>
+                </li>
+                -->
+                <li>CONTACT</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--IMAGE-->
+    <div class="container shrink top-margin">
+        <div>
+            <img class="filter round-edge" src="resources/Atlan's_Trident.png" alt="trident"
+                width="100%">
+        </div>
+        <div class="bottom-left">
+            <p>Overlaid text</p>
+        </div>
+        <div class="overlay">
+            This is fading overlay text
+        </div>
+
+    </div>
+
+    <!--TABLE --------------------------------->
+    <table class="table border">
+
+        <colgroup>
+            <col span="2" class="col-color-blue">
+        </colgroup>
+
+        <tr>
+            <th>THINGS</th>
+            <th>COLOR</th>
+            <th>???</th>
+
+        </tr>
+
+        <tr>
+            <td>hot dogs</td>
+            <td>brown</td>
+            <td>meat</td>
+        </tr>
+
+    </table>
+    <!--COLUMNS -------------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="column">THis is the first column<br>
+            </div>
+            <div class="column">THis is the second column</div>
+        </div>
+    </div>
+
+
+    <p style="color:Red">was Red</p>
+    <p style="color:blue">was Blue</p>
+    <p style="color:lightgreen">was Green</p>
+    <p style="color:orange">was Orange</p>
+
+<!-- VIDEO ------------------------------------>
+
+    <div>
+
+     
+
+        <div class="container shrink top-margin">
+            <div>
+                <video autoplay loop muted class="center border">
+                    <source src="resources/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="bottom-left">
+                <p>Overlaid text</p>
+            </div>
+            <div class="overlay text-white">
+                This is fading overlay text
+            </div>
+    
+        </div>
+
+    </div>
+
+
+    <div class="top-margin">
+        <footer class="center embolden top-margin">
+            <div>Some footer text</div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTML_Form</title>
+
+    <style>
+        body {
+            opacity: 1;
+            transition: 10s opacity;
+        }
+
+        .body-fade-out {
+            opacity: 0;
+            /* transition:none; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        document.body.classList.add('fade-out');
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-out');
+        })
+    </script>
+
+    HELLO
+
+
+</body>
+
+</html>

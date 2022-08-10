@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width">
+	<title>HTML_Form</title>
+	<style>
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nothing{
+             position:static; /* // the default, overrides any other top left etc */
+            position: relative; /* RELATIVE to where it would be if STATIC. allows top left to adjust.*/
+            position:absolute; /* relative to first parent with position element defined besides STATIC, exits document flow*/
+            position:fixed; /**/
+            top:0px;
+
+            background: yellow;
+        }
+
+.static{
+position: static;
+}
+ .relative {
+position: relative;
+ }
+.absolute{
+position: absolute;
+}
+
+ .fixed{
+position: fixed;
+background-color: aqua;
+ }
+
+.sticky{
+    background-color: azure;
+    position: sticky;
+    margin-right: 20px;
+    margin-left: 205px;
+    top:0px;
+}
+
+ p{
+     margin:0;
+     top:0px;
+ }
+
+ div{
+     margin-top: 50px;
+     margin-left: 0px;
+     
+background-color:rgba(1,1,1,.2);
+ }
+
+ body{
+     padding:0;
+     background-color: antiquewhite;
+ }
+
+        /* p:nth-of-type(1){
+            background: lime;
+        } */
+	</style>
+</head>
+
+<body>
+
+
+<div class="sticky">
+    <p class="sticky">Some sticky words</p>
+    <div class="sticky">
+        <p class="sticky">nested sticky</p>
+    
+    </div>
+</div>
+
+    <div class="relative">
+        <P>container DIV</P>
+        <div id="inside">
+            <p style="height:500px;">nested DIV</p>
+        </div>
+    </div>
+
+<p class="fixed">Fixed element </p>
+
+
+</body>
+
+</html>

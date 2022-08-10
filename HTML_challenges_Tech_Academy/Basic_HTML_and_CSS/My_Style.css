@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+p{
+	color: rgb(150,100,200); 
+	text-align: right;
+text-shadow: 5px 5px 5px red;}
+.font_1 {
+	color:chartreuse;
+	font-size: large;
+	background-color: burlywood;
+	text-decoration: overline;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	
+	
+}

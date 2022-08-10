@@ -1,0 +1,84 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    color: rgba(8, 141, 165, .75);
+    margin-left: 50;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    background-color: rgb(255, 223, 170);
+    border: 2px solid black;
+    border-radius: 5%;
+
+}
+
+/*squares styling*/
+.container .squares:nth-child(-n+4) {
+    background-image: url("../icons/Hello.png");
+    width: 100px;
+    height: 100px;
+    margin: 6px;
+    border-radius: 5%;
+    cursor: pointer;
+    float: left;
+    background-color: rgba(265, 265, 265, .5);
+
+    transition: transform 5.0s ease-in-out;
+}
+
+.container .squares:nth-child(-n+4):hover {
+    background-image: url("../icons/icons2.png");
+    transform: scale(.5);
+    animation-name: raceSeth;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+animation-timing-function: cubic-bezier(2.5, 0.5, 0.3, 2);
+    background-color: #fff;
+}
+/*
+define animation
+*/
+@keyframes raceSeth {
+    0%, 100% {
+        transform: translateY(0px);
+        background-image: url("../icons/icons2.png");
+    }
+    50% {
+        transform: translateY(330px);
+    }
+}
+
+
+/*squares paragraphs styling*/
+.squares:nth-child(-n+4) p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .5cm;
+    text-align: center;
+    font-weight: 900;
+    color: rgb(148, 148, 148);
+}
+
+.container .squares:nth-child(1) {
+    background-color: #f8a;
+}
+
+.container .squares:nth-child(2) {
+    background-color: #aaa;
+}
+
+.container .squares:nth-child(3) {
+    background-color: #ccc;
+}
+
+.container .squares:nth-child(4) {
+    background-color: #ddd;
+}
+
+
+p {
+    color: rgb(150, 100, 200);
+}

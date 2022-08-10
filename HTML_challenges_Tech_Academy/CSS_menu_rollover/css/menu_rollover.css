@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(156, 156, 156)
+}
+
+.wrap {
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+
+.menu-container {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu {
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+
+    width: 100px;
+    color: white;
+    display: inline-block;
+    margin-right: -2px;
+    position: relative;
+    padding: 12px 40px;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    background-color: navy;
+    cursor: pointer;
+
+
+
+}
+
+
+.menu li:hover {
+    color:white;
+    background-color:blue;
+}
+
+.menu li:hover ul {
+    /*only visible when hovered*/
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* same as
+.submenu { */
+.menu li ul {
+    padding: 0;
+    left: 0;
+    position: absolute;
+    top: 43.5px;
+    width: 100px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu li ul li {
+    background-color: gold;
+
+    display: block;
+    color: black;
+}
+
+.submenu li:hover {
+    color:white;
+    background-color:goldenrod;
+}
